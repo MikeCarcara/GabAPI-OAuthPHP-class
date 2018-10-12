@@ -12,8 +12,8 @@ This project is licensed under the GNU License - see the
 ## Acknowledgments
 * Gab.com Developers API
 ## Getting Started
-Simply upload the gab.php file to your HTTP/HTTPS server and 
-configure the define() variables to your Gab.com App settings
+Simply upload the file to your HTTP/HTTPS server and 
+configure the variables to your Gab.com App settings
 ### Prerequisites
 ``` Gab.com PRO account and understanding of PHP scripting ```
 ### Gab.com API Examples
