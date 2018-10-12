@@ -15,7 +15,7 @@
 session_start(); 
 
 /// GabAPI-OAuthPHP Class using Gab.com API 
-class GabAPI-OAuthPHP { 
+class GabAPI_OAuthPHP { 
 // Must be exact match to Gab.com App Request URI
    var $RedirectURI = '{PATH TO FILE}?callback';
    /*
@@ -59,12 +59,13 @@ function getAccessToken($code){
         'grant_type' => 'authorization_code'
   ))));
   $json = json_decode(curl_exec($curl));
+
   return $json->access_token;
 }
 }
 
 /// Execute GabAPI/OAuthPHP Class 
-$gab = new GabAPI-OAuthPHP; 
+$gab = new GabAPI_OAuthPHP; 
 
 /// Gab.com API access token expired so refresh GabAPI/OAuthPHP Class 
 if(isset($_GET['reset'])){
@@ -76,7 +77,7 @@ if(isset($_GET['reset'])){
 if(isset($_GET['callback'])){ 
 
 /// Execute GabAPI/OAuthPHP Class 
-$gab = new GabAPI-OAuthPHP; 
+$gab = new GabAPI_OAuthPHP; 
 
 /// Strip the Gab.com API access code from url and get access token 
 $strip_uri = explode("&code=", $_SERVER['REQUEST_URI']); $code = $strip_uri[1];
